@@ -19,14 +19,9 @@ def connect_clients():
 
 def recv_pos(c):
     while True:
-
-#        try:
         pos = c.recv(1024)
         if pos:
-            print(pos)
             send_pos(c, pos)
-#        except:
- #           break
 
 
 def send_pos(cli_sock, position):
